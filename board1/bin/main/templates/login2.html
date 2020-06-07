@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  background:#e2e2e2;
+}
+
+.container{
+  position:relative;
+  top:200px;
+  left:35%;
+  display:block;
+  margin-bottom:80px;
+  width:500px;
+  height:360px;
+  background:#fff;
+  border-radius:5px;
+  overflow:hidden;
+  z-index:1;
+}
+
+h2{
+  padding:40px;
+  font-weight:lighter;
+  text-transform:uppercase;
+  color:#414141;
+}
+
+input {
+  display: block;
+  height: 50px;
+  width: 90%;
+  margin: 0 auto;
+  border: none;
+}
+input::placeholder {
+  transform: translateY(0px);
+  transition: 0.5s;
+}
+input:hover, input:focus, input:active:focus {
+  color: #ff5722;
+  border-bottom: 1px solid #ff5722;
+}
+input:hover::placeholder, input:focus::placeholder, input:active:focus::placeholder {
+  color: #ff5722;
+  position: relative;
+  transform: translateY(-20px);
+}
+
+
+.id,
+.pwd{
+  position:relative;
+  z-index:1;
+  border-bottom:1px solid rgba(0,0,0,.1);
+  padding-left:20px;
+  font-family: 'Open Sans', sans-serif;
+  text-transform:uppercase;
+  color:#858585;
+  font-weight:lighter;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+.error-msg{
+  text-decoration:none;
+  display:inline-block;
+  margin:27px 25%;
+  color:red;
+  font-weight:bold;
+  font-size:12px;
+  
+}
+
+button{
+  cursor:pointer; 
+  display:inline-block;
+  float:left;
+  width:250px;
+  height:60px;
+  margin-top:-10px;
+  border:none;
+  font-family: 'Open Sans', sans-serif;
+  text-transform:uppercase;
+  color:#fff;
+  transition:.5s;
+
+}
+ button:nth-of-type(1){
+ 	background:#673ab7;
+ }
+
+ button:nth-of-type(2){
+ 	background:#ff5722;
+ }
+ 
+</style>
+</head>
+<body>
+	<div class="container">
+		<h2>login</h2>
+		<form>
+			<input type="text" class="id" placeholder="아이디를 입력해주세요"> <br />
+			<input type="text" class="pwd" placeholder="비밀번호를 입력해주세요">
+		</form>
+		<p href="#" class="error-msg">아이디 혹은 비밀번호를 다시 한번 확인해주세요.</p>
+		<button class="register">
+			<span>login</span>
+		</button>
+		<button class="signin">
+			<span>sign in</span>
+		</button>
+	</div>
+</body>
+</html>
